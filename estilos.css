@@ -1,0 +1,552 @@
+/* =========================================
+   1. ESTILOS GENERALES Y RESET
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredoka One', cursive;
+}
+
+/* CLASE AUXILIAR "CLEARFIX" */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* =========================================
+   2. HEADER / ENCABEZADO
+   ========================================= */
+header {
+    background-color: #c99deb;
+    padding: 0 20px;
+    border-bottom: 5px solid #eb9263;
+    height: auto;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    width: auto;
+    height: 90px;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Menú de navegación */
+nav {
+    float: left;
+    margin-top: 35px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav li a:hover {
+    color: #687034; /* Verde oscuro al pasar el ratón */
+    text-decoration: underline;
+}
+
+nav li a.activo {
+    color: #EB9263; /* Color diferente para la página activa */
+    background-color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Zona derecha del Header */
+.header-right {
+    float: right;
+    text-align: right;
+    width: 320px;
+    height: 90px;
+    position: relative;
+}
+
+.idiomas {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.idiomas button {
+    background-color: #e5e89d;
+    border: 1px solid #687034;
+    color: #333;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 11px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* =========================================
+   3. ESTILOS DE BOTONES (UNIFICADOS)
+   ========================================= */
+
+/* Estilos comunes para TODOS los botones grandes/redondos */
+.btn-login-header,
+.btn-header-verde,
+.btn-grande {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;      /* Bordes muy redondeados */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;     /* Animación suave */
+    text-align: center;
+}
+
+/* VARIANTE 1: Botón del Header (Login) */
+.btn-login-header {
+    background-color: #ffffff;
+    color: #C99DEB;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 35px;
+}
+
+.btn-login-header:hover {
+    background-color: #EB9263;
+    border-color: #EB9263;
+    color: white;
+}
+
+/* VARIANTE 2: Botón del Header (Verde - Registro/Perfil) */
+.btn-header-verde {
+    background-color: #ffffff;
+    color: #687034;
+    border: 2px solid #687034;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 35px;
+}
+
+.btn-header-verde:hover {
+    background-color: #687034;
+    color: white;
+}
+
+/* VARIANTE 3: Botón Grande (CTA Principal) */
+.btn-grande {
+    background-color: #EB9263;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 40px;
+    border: none;
+    margin-top: 20px;
+}
+
+.btn-grande:hover {
+    background-color: #C99DEB;
+    transform: scale(1.05); /* Efecto crecer */
+}
+
+/* Botones pequeños de formularios */
+.login-form button {
+    background-color: #eb9263;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px; /* Menos redondeado */
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #687034;
+}
+
+/* =========================================
+   4. ESTILOS DE CONTENIDO Y PÁGINAS
+   ========================================= */
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Hero Sección */
+.hero h1 {
+    color: #C99DEB;
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+.hero h2 {
+    color: #666;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* Imagen Central */
+.imagen-central {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+}
+
+.imagen-central img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(104, 112, 52, 0.2);
+}
+
+/* Columnas */
+.info-seccion {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.columna {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.columna h3 {
+    color: #687034;
+    margin-bottom: 10px;
+}
+
+.columna p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Opiniones */
+.opiniones {
+    background-color: #f6f5ff;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #e0e0e0;
+}
+
+.opiniones h3 {
+    color: #C99DEB;
+    margin-top: 0;
+}
+
+.contenedor-opiniones {
+    text-align: center;
+}
+
+.opinion {
+    display: inline-block;
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    vertical-align: top;
+    text-align: left;
+}
+
+.opinion span {
+    display: block;
+    margin-top: 10px;
+    color: #999;
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* Encabezados páginas internas */
+.page-header {
+    background-color: #fcfcfc;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px dashed #e3eb9d;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    color: #EB9263;
+    font-size: 2.5em;
+}
+
+.contenido-texto {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.contenido-texto h2 {
+    color: #C99DEB;
+    border-bottom: 2px solid #e3eb9d;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Formularios */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.campo-form {
+    margin-bottom: 20px;
+}
+
+.campo-form label {
+    display: block;
+    font-weight: bold;
+    color: #687034;
+    margin-bottom: 8px;
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #C99DEB;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: #EB9263;
+    background-color: #fffdf9;
+}
+
+/* Perfil */
+.perfil-switcher {
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.switcher-container { display: inline-block; }
+
+.switcher-label {
+    float: left;
+    margin-right: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+.perfil-avatar {
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.perfil-avatar:hover { opacity: 1; }
+
+.activo-avatar {
+    opacity: 1;
+    font-weight: bold;
+    color: #EB9263;
+}
+
+.circulo-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    line-height: 50px;
+    font-size: 24px;
+    margin: 0 auto 5px auto;
+    border: 2px solid transparent;
+}
+
+.humano { background-color: #C99DEB; color: white; }
+.perro { background-color: #e3eb9d; color: #687034; }
+.mas { background-color: white; border: 2px dashed #ccc; color: #ccc; }
+
+.activo-avatar .circulo-avatar {
+    border-color: #EB9263;
+    transform: scale(1.1);
+}
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
+footer {
+    clear: both;
+    background-color: #e5e89d;
+    padding: 30px 40px;
+    border-top: 5px solid #eb9263;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer h4 {
+    margin: 0 0 10px 0;
+    color: #687034;
+}
+
+.footer-left {
+    float: left;
+    text-align: left;
+    width: 45%;
+}
+
+.enlace-contacto {
+    display: inline-block;
+    background-color: #fff;
+    color: #eb9263;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #eb9263;
+    transition: all 0.3s;
+}
+
+.enlace-contacto:hover {
+    background-color: #eb9263;
+    color: white;
+}
+
+.legales {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.footer-right {
+    float: right;
+    text-align: right;
+    width: 45%;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #1da1f2; }
+
+.copyright {
+    clear: both;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(104, 112, 52, 0.2);
+    text-align: center;
+    color: #687034;
+    font-weight: bold;
+}
+
+/* =========================================
+   6. RESPONSIVE (Móvil) DESDE 768px
+   ========================================= */
+@media (max-width: 768px) {
+    /* Las columnas dejan de flotar y ocupan el 100% */
+    .columna {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* El header se apila */
+    .logo,
+    nav,
+    .header-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        height: auto; /* Altura automática en móvil */
+    }
+
+    nav li {
+        display: block; /* Menú vertical en móvil */
+        margin: 10px 0;
+    }
+
+    /* Footer apilado */
+    .footer-left,
+    .footer-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Botones ajustados */
+    .btn-login-header,
+    .btn-header-verde {
+        margin-top: 10px; /* Menos margen en móvil */
+    }
+    
+    .idiomas {
+        position: relative; /* Ya no absoluto en móvil */
+        top: 0;
+        margin-bottom: 10px;
+    }
+}

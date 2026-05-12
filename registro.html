@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoofMeet - Crear Cuenta</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="clearfix">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="como-funciona.html">Cómo funciona</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="seguridad.html">Seguridad</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="idiomas">
+                <button>ES</button>
+                <button>EN</button>
+            </div>
+            <a href="login.html" class="btn-header-verde">¿Ya tienes cuenta?</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-card">
+            <h1>Crea tu cuenta de dueño</h1>
+            <p>Empieza a formar parte de la comunidad. Luego podrás añadir los perfiles de tus peludos.</p>
+
+            <form action="perfil.html" class="formulario-contacto">
+                <div class="campo-form">
+                    <label for="nombre">Nombre y Apellidos:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Laura García" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="pass">Contraseña:</label>
+                    <input type="password" id="pass" placeholder="Mínimo 8 caracteres" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="ciudad">Ciudad / Zona:</label>
+                    <input type="text" id="ciudad" placeholder="Ej: Madrid Centro" required>
+                </div>
+
+                <button type="submit" class="btn-grande"
+                    style="width:100%; border-radius:10px; margin-top:10px;">Continuar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="clearfix">
+        
+        <div class="footer-left">
+            <h4>¿Necesitas ayuda?</h4>
+            <a href="contacto.html" class="enlace-contacto">Contactar con Soporte</a>
+            <p class="legales">Política de Privacidad | Cookies</p>
+        </div>
+
+        <div class="footer-right">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <button class="social-btn instagram">IG</button>
+                <button class="social-btn facebook">FB</button>
+                <button class="social-btn twitter">TW</button>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 WoofMeet. Conectando colas felices.
+        </div>
+    </footer>
+</body>
+
+</html>

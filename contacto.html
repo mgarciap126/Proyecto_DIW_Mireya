@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoofMeet - Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="clearfix">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="como-funciona.html">Cómo funciona</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="seguridad.html">Seguridad</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="idiomas">
+                <button>ES</button>
+                <button>EN</button>
+            </div>
+
+            <a href="login.html" class="btn-login-header">Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contacta con nosotros</h1>
+            <p>¿Tienes dudas o sugerencias? Te leemos.</p>
+        </section>
+
+        <div class="contenido-texto">
+            <form class="formulario-contacto" action="#" method="POST">
+
+                <div class="campo-form">
+                    <label for="nombre">Tu Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Laura García" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">Tu Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Duda sobre servicios..." required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta..."
+                    required></textarea>
+                </div>
+
+                <button type="submit" class="btn-grande" style="border-radius: 8px; width: 100%;">Enviar
+                    Mensaje</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="clearfix">
+        
+        <div class="footer-left">
+            <h4>¿Necesitas ayuda?</h4>
+            <a href="contacto.html" class="enlace-contacto">Contactar con Soporte</a>
+            <p class="legales">Política de Privacidad | Cookies</p>
+        </div>
+
+        <div class="footer-right">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <button class="social-btn instagram">IG</button>
+                <button class="social-btn facebook">FB</button>
+                <button class="social-btn twitter">TW</button>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 WoofMeet. Conectando colas felices.
+        </div>
+    </footer>
+</body>
+
+</html>

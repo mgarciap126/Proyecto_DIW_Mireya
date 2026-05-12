@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoofMeet - Iniciar Sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="clearfix">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="como-funciona.html">Cómo funciona</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="seguridad.html">Seguridad</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="idiomas">
+                <button>ES</button>
+                <button>EN</button>
+            </div>
+            <a href="registro.html" class="btn-header-verde">¿No tienes cuenta?</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-card">
+            <h2>¡Hola de nuevo!</h2>
+            <p>Introduce tus datos para entrar a tu perfil.</p>
+
+            <form action="perfil.html" class="formulario-contacto" style="text-align:left;">
+
+                <div class="campo-form">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Tu usuario" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="********" required>
+                </div>
+
+                <button type="submit" class="btn-grande" style="width:100%; border-radius:10px;">Entrar</button>
+            </form>
+
+            <p style="margin-top: 20px;">
+                ¿No tienes cuenta? <a href="registro.html" style="color:#EB9263; font-weight:bold;">Regístrate aquí</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="clearfix">
+        
+        <div class="footer-left">
+            <h4>¿Necesitas ayuda?</h4>
+            <a href="contacto.html" class="enlace-contacto">Contactar con Soporte</a>
+            <p class="legales">Política de Privacidad | Cookies</p>
+        </div>
+
+        <div class="footer-right">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <button class="social-btn instagram">IG</button>
+                <button class="social-btn facebook">FB</button>
+                <button class="social-btn twitter">TW</button>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 WoofMeet. Conectando colas felices.
+        </div>
+    </footer>
+
+</body>
+
+</html>
