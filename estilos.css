@@ -14,103 +14,128 @@ h1, h2, h3 {
     font-family: 'Fredoka One', cursive;
 }
 
-/* CLASE AUXILIAR "CLEARFIX" */
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* =========================================
    2. HEADER / ENCABEZADO
    ========================================= */
-header {
+/* =========================================
+   2. CABECERA (ESTRUCTURA FLEXBOX + TU DISEÑO)
+   ========================================= */
+.cabecera-principal {
     background-color: #c99deb;
-    padding: 0 20px;
+    padding: 10px 20px;
     border-bottom: 5px solid #eb9263;
-    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Espacio entre el logo y el menú */
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid rgba(255, 255, 255, 0.5); 
+    padding-right: 20px;
+    margin-right: 20px;  
 }
 
 /* Logo */
-.logo {
-    float: left;
+.contenedor-logo img {
+    height: 80px;
     width: auto;
-    height: 90px;
-    background-color: transparent;
-    border: none;
-    margin-right: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.logo img {
-    width: auto;
-    height: 100%;
     object-fit: contain;
 }
 
 /* Menú de navegación */
-nav {
-    float: left;
-    margin-top: 35px;
-}
-
-nav ul {
+.menu-navegacion ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 25px;
-}
-
-nav li a {
+.menu-navegacion a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
-nav li a:hover {
-    color: #687034; /* Verde oscuro al pasar el ratón */
+.menu-navegacion a:hover {
+    color: #687034;
     text-decoration: underline;
 }
 
-nav li a.activo {
-    color: #EB9263; /* Color diferente para la página activa */
+.menu-navegacion a.activo {
+    color: #EB9263;
     background-color: #ffffff;
     padding: 8px 15px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Zona derecha del Header */
-.header-right {
-    float: right;
-    text-align: right;
-    width: 320px;
-    height: 90px;
-    position: relative;
+/* Zona derecha: Banderas + Botón login*/
+.zona-derecha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
-.idiomas {
-    position: absolute;
-    top: 10px;
-    right: 0;
+/* Idiomas */
+.contenedor-idiomas {
+    display: flex;
+    gap: 8px;
 }
 
-.idiomas button {
-    background-color: #e5e89d;
-    border: 1px solid #687034;
-    color: #333;
-    padding: 2px 6px;
-    cursor: pointer;
-    font-size: 11px;
-    border-radius: 4px;
+.enlace-idioma {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.icono-bandera {
+    width: 28px;
+    height: auto;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+/* Efectos visuales con pseudoclases */
+.enlace-idioma:hover .icono-bandera {
+    transform: scale(1.15);
+    border-color: #eb9263;
+}
+
+.enlace-idioma.activo .icono-bandera {
+    border: 2px solid #687034;
+}
+
+/* Botones de Acceso (Login) */
+.boton-acceso {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #C99DEB;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    font-size: 14px;
     font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.boton-acceso:hover {
+    background-color: #EB9263;
+    border-color: #EB9263;
+    color: white;
 }
 
 /* =========================================

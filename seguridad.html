@@ -12,22 +12,37 @@
 
 <body>
 
-    <header class="clearfix">
-        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
-        <nav>
-            <ul>
-                <li><a href="como-funciona.html">Cómo funciona</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="seguridad.html" class="activo">Seguridad</a></li>
+    <header class="cabecera-principal">
+        <div class="contenedor-logo">
+            <a href="index.html" aria-label="Volver al inicio de WoofMeet">
+                <img src="img/logo.png" alt="Logotipo de WoofMeet: silueta de perro y texto">
+            </a>
+        </div>
+
+        <nav class="menu-navegacion">
+            <ul role="menubar">
+                <li><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
+                <li><a href="servicios.html" role="menuitem">Servicios</a></li>
+                <li><a href="seguridad.html" role="menuitem">Seguridad</a></li>
             </ul>
         </nav>
-        <div class="header-right">
-            <div class="idiomas">
-                <button>ES</button>
-                <button>EN</button>
-            </div>
 
-            <a href="login.html" class="btn-login-header">Iniciar Sesión</a>
+        <div class="zona-derecha">
+            <div class="contenedor-idiomas" role="group" aria-label="Seleccionar idioma">
+                <a href="#" class="enlace-idioma activo" aria-label="Cambiar idioma a Español" title="Español">
+                    <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
+                </a>
+                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
+                    <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
+                </a>
+                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
+                    <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
+                </a>
+                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
+                    <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
+                </a>
+            </div>
+            <a href="login.html" class="boton-acceso" aria-label="Acceder al área de usuario">Iniciar Sesión</a>
         </div>
     </header>
 
