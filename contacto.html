@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WoofMeet - Contacto</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
@@ -12,112 +13,132 @@
 
 <body>
 
+    <!-- Cabecera principal con navegación común del sitio -->
     <header class="cabecera-principal">
-    <div class="contenedor-logo">
-        <a href="index.html" aria-label="Volver a la página de inicio de WoofMeet">
-            <img src="img/logo.png" alt="Logotipo de WoofMeet">
-        </a>
-    </div>
-
-    <input type="checkbox" id="menu-toggle" class="checkbox-oculto" aria-label="Abrir o cerrar menú de navegación móvil">
-    <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-
-    <div class="contenedor-menu-derecha">
-        <nav class="menu-navegacion" aria-label="Navegación principal">
-            <ul role="menubar">
-                <li role="none"><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
-                <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
-                <li role="none"><a href="seguridad.html" role="menuitem">Seguridad</a></li>
-            </ul>
-        </nav>
-
-        <div class="zona-derecha">
-            <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
-                <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
-                    <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
-                </a>
-                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
-                    <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
-                </a>
-                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
-                    <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
-                </a>
-                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
-                    <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
-                </a>
-            </div>
-            <a href="login.html" class="btn-header-verde" aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
+        <div class="contenedor-logo">
+            <a href="index.html" aria-label="Volver a la página de inicio de WoofMeet">
+                <img src="img/logo.png" alt="Logotipo de WoofMeet">
+            </a>
         </div>
-    </div>
-</header>
+
+        <input type="checkbox" id="menu-toggle" class="checkbox-oculto"
+            aria-label="Abrir o cerrar menú de navegación móvil">
+        <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="contenedor-menu-derecha">
+            <nav class="menu-navegacion" aria-label="Navegación principal">
+                <ul role="menubar">
+                    <li role="none"><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="seguridad.html" role="menuitem">Seguridad</a></li>
+                </ul>
+            </nav>
+
+            <div class="zona-derecha">
+                <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
+                    <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
+                        <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
+                    </a>
+                    <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
+                        <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
+                    </a>
+                    <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
+                        <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
+                    </a>
+                    <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
+                        <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
+                    </a>
+                </div>
+                <a href="login.html" class="btn-header-verde"
+                    aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
 
     <main id="contenido-principal" aria-label="Página de contacto">
-    <section class="page-header" aria-labelledby="titulo-contacto">
-    <h1 id="titulo-contacto">Contacta con nosotros</h1> <p>¿Tienes dudas o sugerencias? Te leemos.</p>
-</section>
+        <!-- Formulario de contacto para resolver dudas y recoger sugerencias -->
+        <section class="page-header" aria-labelledby="titulo-contacto">
+            <h1 id="titulo-contacto">Contacta con nosotros</h1>
+            <p>¿Tienes dudas o sugerencias? Te leemos.</p>
+        </section>
 
-    <section class="contenido-texto" aria-label="Formulario de contacto">
-        <form class="formulario-contacto" action="#" method="POST">
+        <!-- Campo de entrada para que el usuario pueda enviar su consulta -->
+        <section class="contenido-texto" aria-label="Formulario de contacto">
+            <form class="formulario-contacto" action="#" method="POST">
 
-            <div class="campo-form">
-                <label for="nombre">Tu Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Laura García" autocomplete="name" required aria-required="true">
-            </div>
+                <!-- Campo de texto para identificar a la persona que escribe -->
+                <div class="campo-form">
+                    <label for="nombre">Tu Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Laura García" autocomplete="name"
+                        required aria-required="true">
+                </div>
 
-            <div class="campo-form">
-                <label for="email">Tu Correo Electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="nombre@correo.com" autocomplete="email" required aria-required="true">
-            </div>
+                <!-- Campo de correo para responder al mensaje de soporte -->
+                <div class="campo-form">
+                    <label for="email">Tu Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" autocomplete="email"
+                        required aria-required="true">
+                </div>
 
-            <div class="campo-form">
-                <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" name="asunto" placeholder="Duda sobre servicios..." required aria-required="true">
-            </div>
+                <!-- Campo temático para clasificar la consulta antes de enviarla -->
+                <div class="campo-form">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Duda sobre servicios..." required
+                        aria-required="true">
+                </div>
 
-            <div class="campo-form">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta..." required aria-required="true"></textarea>
-            </div>
+                <!-- Área de texto amplia para redactar la consulta con más detalle -->
+                <div class="campo-form">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta..." required
+                        aria-required="true"></textarea>
+                </div>
 
-            <button type="submit" class="btn-grande btn-formulario">Enviar Mensaje</button>
-        </form>
-    </section>
-</main>
+                <!-- Botón de envío del formulario de soporte -->
+                <button type="submit" class="btn-grande btn-formulario">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
 
+    <!-- Pie de página con vías de ayuda, enlaces legales y redes sociales -->
     <footer class="footer-principal" aria-label="Pie de página">
-    <div class="footer-contenido">
-        <div class="footer-left">
-            <h4>¿Necesitas ayuda?</h4>
-            <a href="contacto.html" class="enlace-contacto" aria-label="Contactar con el equipo de soporte">Contactar con Soporte</a>
-            <p class="legales">
-                <a href="privacidad.html" aria-label="Leer Política de Privacidad">Política de Privacidad</a> | 
-                <a href="cookies.html" aria-label="Leer Política de Cookies">Cookies</a>
-            </p>
-        </div>
+        <div class="footer-contenido">
+            <div class="footer-left">
+                <h4>¿Necesitas ayuda?</h4>
+                <a href="contacto.html" class="enlace-contacto"
+                    aria-label="Contactar con el equipo de soporte">Contactar con Soporte</a>
+                <p class="legales">
+                    <a href="#" aria-label="Leer Política de Privacidad">Política de Privacidad</a> |
+                    <a href="#" aria-label="Leer Política de Cookies">Cookies</a>
+                </p>
+            </div>
 
-        <div class="footer-right">
-            <h4>Síguenos</h4>
-            <div class="social-icons" aria-label="Redes sociales de WoofMeet">
-                <a href="#" class="social-btn instagram" aria-label="Visitar nuestro perfil de Instagram">IG</a>
-                <a href="#" class="social-btn facebook" aria-label="Visitar nuestra página de Facebook">FB</a>
-                <a href="#" class="social-btn twitter" aria-label="Visitar nuestro perfil de Twitter">TW</a>
+            <div class="footer-right">
+                <h4>Síguenos</h4>
+                <div class="social-icons" aria-label="Redes sociales de WoofMeet">
+                    <a href="#" class="social-btn instagram" aria-label="Visitar nuestro perfil de Instagram">IG</a>
+                    <a href="#" class="social-btn facebook" aria-label="Visitar nuestra página de Facebook">FB</a>
+                    <a href="#" class="social-btn twitter" aria-label="Visitar nuestro perfil de Twitter">TW</a>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="copyright">
-        <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by Mireya García Piñas is licensed under
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons" class="icono-cc">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
-    </div>
-</footer>
+
+        <div class="copyright">
+            <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by
+            Mireya García Piñas is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC
+                BY-NC-ND 4.0</a>
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons"
+                class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
+        </div>
+    </footer>
 </body>
 
 </html>

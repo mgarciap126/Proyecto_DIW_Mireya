@@ -1,13 +1,14 @@
 /* =========================================
    1. ESTILOS GENERALES Y RESET
    ========================================= */
-/* Esto es VITAL para que los paddings no rompan el responsive */
+/* Evita que el padding altere el cálculo de los anchos. */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Base tipográfica y colores generales de toda la página. */
 body {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ body {
     color: #333;
 }
 
+/* Jerarquía tipográfica principal para titulares de contenido. */
 h1,
 h2,
 h3 {
@@ -36,13 +38,13 @@ h3 {
     flex-wrap: nowrap;
 }
 
-/* Ocultar elementos de móvil en la vista de PC */
+/* Oculta los controles móviles en pantallas de escritorio. */
 .checkbox-oculto,
 .icono-hamburguesa {
     display: none;
 }
 
-/* Espacio entre el logo y el menú */
+/* Separación visual entre el logotipo y la navegación. */
 .contenedor-logo {
     display: flex;
     align-items: center;
@@ -57,6 +59,7 @@ h3 {
     object-fit: contain;
 }
 
+/* Bloque que agrupa navegación, idioma y acceso de usuario. */
 .contenedor-menu-derecha {
     display: flex;
     justify-content: space-between;
@@ -64,6 +67,7 @@ h3 {
     flex-grow: 1;
 }
 
+/* Lista principal de navegación del sitio. */
 .menu-navegacion ul {
     margin: 0;
     padding: 0;
@@ -72,19 +76,36 @@ h3 {
     gap: 25px;
 }
 
+/* Enlaces del menú superior, pensados para la navegación global. */
 .menu-navegacion a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    transition: all 0.3s;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menu-navegacion a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #687034;
+    transition: width 0.3s ease;
 }
 
 .menu-navegacion a:hover {
     color: #687034;
-    text-decoration: underline;
 }
 
+.menu-navegacion a:hover::after {
+    width: 100%;
+}
+
+/* Estado visual del enlace activo en la navegación superior. */
 .menu-navegacion a.activo {
     color: #EB9263;
     background-color: #ffffff;
@@ -93,6 +114,7 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Área derecha con selector de idioma y botón de acceso. */
 .zona-derecha {
     display: flex;
     flex-direction: row;
@@ -100,11 +122,13 @@ h3 {
     gap: 15px;
 }
 
+/* Agrupación visual de las banderas de idioma. */
 .contenedor-idiomas {
     display: flex;
     gap: 8px;
 }
 
+/* Enlace individual que representa cada idioma disponible. */
 .enlace-idioma {
     display: inline-block;
     margin-left: 8px;
@@ -112,6 +136,7 @@ h3 {
     text-decoration: none;
 }
 
+/* Tamaño y presentación de cada bandera del selector de idioma. */
 .icono-bandera {
     width: 28px;
     height: auto;
@@ -130,43 +155,25 @@ h3 {
     border: 2px solid #687034;
 }
 
-.boton-acceso {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #C99DEB;
-    border: 2px solid #ffffff;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-}
-
-.boton-acceso:hover {
-    background-color: #EB9263;
-    border-color: #EB9263;
-    color: white;
-}
-
 /* =========================================
    3. ESTILOS DE BOTONES (UNIFICADOS)
    ========================================= */
 .btn-login-header,
 .btn-header-verde,
 .btn-grande {
+    /* Base común de los botones principales del sitio. */
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
     border-radius: 50px;
-    cursor: pointer;
+    /* Cursor personalizado con una huella del estilo de la web. */
+    cursor: url('img/huella.png'), pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
     text-align: center;
 }
 
+/* Botón de acceso utilizado en cabeceras o formularios compactos. */
 .btn-login-header {
     background-color: #ffffff;
     color: #C99DEB;
@@ -181,6 +188,7 @@ h3 {
     color: white;
 }
 
+/* Botón de navegación con contraste verde sobre fondo claro. */
 .btn-header-verde {
     background-color: #ffffff;
     color: #687034;
@@ -194,6 +202,7 @@ h3 {
     color: white;
 }
 
+/* Botón de llamada a la acción principal en las páginas. */
 .btn-grande {
     background-color: #EB9263;
     color: white;
@@ -208,30 +217,16 @@ h3 {
     transform: scale(1.05);
 }
 
-.login-form button {
-    background-color: #eb9263;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 5px;
-    transition: background-color 0.3s;
-}
-
-.login-form button:hover {
-    background-color: #687034;
-}
-
 /* =========================================
    4. ESTILOS DE CONTENIDO Y PÁGINAS (MAIN)
    ========================================= */
+/* Contenedor general del contenido principal de cada página. */
 main {
     padding: 40px 20px;
     text-align: center;
 }
 
+/* Titular principal del bloque hero de la portada. */
 .hero h1 {
     color: #C99DEB;
     font-size: 3.5em;
@@ -247,6 +242,7 @@ main {
 }
 
 
+/* Bloque que centra la imagen principal de la portada. */
 .imagen-central {
     margin: 40px auto;
     width: 90%;
@@ -254,6 +250,7 @@ main {
     height: auto;
 }
 
+/* Imagen destacada de la página de inicio. */
 .imagen-central img {
     width: 100%;
     height: auto;
@@ -261,6 +258,7 @@ main {
     box-shadow: 0 10px 20px rgba(104, 112, 52, 0.2);
 }
 
+/* Rejilla que organiza las tarjetas informativas de la web. */
 .info-seccion {
     margin: 60px auto;
     max-width: 1100px;
@@ -276,17 +274,18 @@ main {
     line-height: 1;
 }
 
+/* Llamada a la acción situada al final de varias páginas. */
 .cta-final-limpio {
     text-align: center;
     margin: 40px 0 80px 0;
 }
 
+/* Tarjeta base usada para resumir servicios, pasos o ventajas. */
 .columna {
     background-color: #fff;
     padding: 30px 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    /* Le damos estilo de tarjeta */
     border: 1px solid #f0f0f0;
     text-align: center;
 }
@@ -296,13 +295,14 @@ main {
     margin-bottom: 15px;
 }
 
+/* Texto descriptivo de cada tarjeta o bloque informativo. */
 .columna p {
     color: #555;
     line-height: 1.6;
     margin: 0;
 }
 
-/* Estilo para los números gigantes de los pasos */
+/* Formato del indicador numérico de los pasos. */
 .numero-paso {
     display: block;
     font-family: 'Fredoka One', cursive;
@@ -312,23 +312,13 @@ main {
     line-height: 1;
 }
 
-.destacado-final {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.destacado-final .btn-grande {
-    display: inline-block;
-    margin-top: 25px;
-}
-
+/* Carrusel de opiniones. */
 .opiniones {
     background-color: #f6f5ff;
-    padding: 40px;
+    padding: 50px 20px;
     border-radius: 20px;
-    margin: 0 auto;
-    width: 80%;
+    margin: 40px auto;
+    width: 90%;
     max-width: 1000px;
     border: 1px solid #e0e0e0;
 }
@@ -339,59 +329,68 @@ main {
     margin-bottom: 30px;
 }
 
-.contenedor-opiniones {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
+/* Tarjeta que contiene una opinión individual del carrusel. */
 .opinion {
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
     background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Alineación del avatar y el nombre en la cabecera de la reseña. */
+.cabecera-perfil {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
-.opinion p {
-    margin-top: 0;
-    font-style: italic;
-    color: #444;
-    line-height: 1.5;
+/* Fotografía de perfil mostrada dentro de cada reseña. */
+.foto-perfil {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #EB9263;
 }
 
-.opinion span {
-    display: block;
-    margin-top: 15px;
+.nombre-opinion {
     color: #EB9263;
     font-weight: bold;
-    font-size: 0.9em;
-    text-align: right;
+    font-size: 1.1em;
+    font-family: 'Fredoka One', cursive;
+}
+
+/* Texto final del testimonio en formato de cita visual. */
+.opinion p {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
 }
 
 .caja-destacada {
     background-color: #f6f5ff;
-    /* Lila muy clarito de fondo */
+    /* Fondo lila suave para destacar la sección. */
     border: 2px dashed #C99DEB;
-    /* Borde morado para dar contraste */
+    /* Borde discontinuo para reforzar el bloque destacado. */
     border-radius: 25px;
     padding: 50px 30px;
     margin: 80px auto 40px auto;
     max-width: 900px;
     box-shadow: 0 10px 20px rgba(201, 157, 235, 0.15);
-    /* Sombra morada sutil */
+    /* Sombra suave para separar visualmente la tarjeta. */
 }
 
 .caja-destacada .encabezado-seccion {
     margin-bottom: 20px;
-    /* Reducimos el margen interno del título */
+    /* Ajuste del espaciado del encabezado interno. */
 }
 
 .texto-informativo {
@@ -402,6 +401,7 @@ main {
     font-size: 1.05rem;
 }
 
+/* Bloque lila que agrupa contenidos destacados y de explicación técnica. */
 .contenedor-fondo-lila {
     background-color: #f6f5ff;
     border-radius: 30px;
@@ -411,52 +411,51 @@ main {
     border: 2px dashed #C99DEB;
 }
 
-/* Quitamos el margen extra del grid cuando está dentro del fondo lila */
+/* Elimina el margen extra del grid dentro del bloque lila. */
 .contenedor-fondo-lila .info-seccion {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/* --- 1. TÍTULOS PRINCIPALES DE PÁGINA (H1) --- */
-/* Afecta a los H1 de todas las páginas (Index, Contacto, Registro) */
+/* Encabezados principales de página (H1). */
+/* Afecta a los H1 de inicio, contacto y registro. */
 .page-header h1,
 .form-card h1,
 .encabezado-seccion h1 {
     color: #EB9263;
     font-size: 2.8em;
-    /* Tamaño dominante */
+    /* Tamaño principal para mantener la jerarquía visual. */
     font-family: 'Fredoka One', cursive;
     margin-bottom: 10px;
 }
 
-/* --- 2. TÍTULOS DE SECCIÓN (H2) --- */
-/* Esta es la clase que quieres usar en todas las páginas */
+/* Encabezados de sección (H2). */
+/* Clase reutilizable para los títulos de sección de todo el sitio. */
 .encabezado-seccion {
     text-align: center;
     margin-bottom: 35px;
     grid-column: 1 / -1;
-    /* Para que ocupe todo el ancho en Grid */
+    /* Ocupa todo el ancho disponible dentro de la rejilla. */
 }
 
 .encabezado-seccion h2 {
     color: #EB9263;
     font-size: 2.1em;
-    /* NOTA: Es más pequeño que el H1 (2.8em) */
+    /* Tamaño inferior al H1 para mantener la jerarquía. */
     font-family: 'Fredoka One', cursive;
     margin-bottom: 12px;
 }
 
 .encabezado-seccion p {
     color: #687034;
-    /* Tu verde corporativo para el subtítulo */
+    /* Verde corporativo para el texto descriptivo. */
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* =========================================
-   ARREGLO DEL VIDEO Y TRANSCRIPCIÓN
-   ========================================= */
+/* Sección del vídeo y su transcripción. */
+/* Bloque que reúne el vídeo explicativo y su texto asociado. */
 .contenedor-tutorial {
     max-width: 1000px;
     margin: 60px auto;
@@ -486,6 +485,7 @@ main {
     object-fit: cover;
 }
 
+/* Caja que contiene la explicación escrita del contenido audiovisual. */
 .transcripcion-box {
     margin-top: 30px;
     padding: 30px;
@@ -519,6 +519,7 @@ main {
 /* =========================================
    5. FOOTER (FLEXBOX)
    ========================================= */
+/* Pie de página de la web, con ayuda, enlaces legales y redes sociales. */
 .footer-principal {
     background-color: #e5e89d;
     padding: 30px 40px;
@@ -535,16 +536,18 @@ main {
     margin-bottom: 20px;
 }
 
+/* Títulos secundarios utilizados dentro del pie de página. */
 .footer-principal h4 {
     margin: 0 0 10px 0;
     color: #687034;
 }
 
+/* Columna izquierda del footer, centrada en ayuda y enlaces legales. */
 .footer-left {
     text-align: left;
 }
 
-/* Tarjeta contenedora exclusiva para el Login */
+/* Tarjeta principal del formulario de acceso. */
 .form-card {
     background: #fff;
     padding: 40px;
@@ -555,7 +558,7 @@ main {
     border: 1px solid #eee;
 }
 
-/* Uso de Flexbox para estructurar todos los formularios de la web */
+/* Estructura flexible común para los formularios de la web. */
 .formulario-contacto {
     max-width: 600px;
     margin: 0 auto;
@@ -563,21 +566,23 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Crea un espacio entre campos */
+    /* Separación vertical entre campos. */
 }
 
-/* Flexbox interno para que la etiqueta y el input se alineen */
+/* Contenedor flexible para alinear etiqueta y campo. */
 .campo-form {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
+/* Etiquetas descriptivas de cada campo del formulario. */
 .campo-form label {
     font-weight: bold;
     color: #687034;
 }
 
+/* Entradas de texto y áreas de texto reutilizadas en toda la web. */
 .campo-form input,
 .campo-form textarea {
     width: 100%;
@@ -595,12 +600,14 @@ main {
     background-color: #fffdf9;
 }
 
+/* Botón de envío en formularios con ancho completo. */
 .btn-formulario {
     width: 100%;
     border-radius: 8px;
     margin-top: 10px;
 }
 
+/* Enlace de apoyo para derivar al registro o al acceso. */
 .enlace-registro {
     margin-top: 25px;
     font-size: 0.95em;
@@ -618,6 +625,7 @@ main {
     text-decoration: underline;
 }
 
+/* Botón secundario utilizado para redirigir al formulario de contacto. */
 .enlace-contacto {
     display: inline-block;
     background-color: #fff;
@@ -635,6 +643,7 @@ main {
     color: white;
 }
 
+/* Texto legal y de privacidad situado en el área inferior del footer. */
 .legales {
     font-size: 0.8em;
     color: #666;
@@ -655,12 +664,14 @@ main {
     text-align: right;
 }
 
+/* Grupo de iconos para enlazar a redes sociales. */
 .social-icons {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
 }
 
+/* Botón circular genérico para redes sociales. */
 .social-btn {
     display: flex;
     align-items: center;
@@ -679,6 +690,7 @@ main {
     color: white;
 }
 
+/* Variantes cromáticas de cada red social. */
 .instagram {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
@@ -691,9 +703,7 @@ main {
     background-color: #1da1f2;
 }
 
-/* =========================================
-   ARREGLO DE LOS ENLACES DEL COPYRIGHT
-   ========================================= */
+/* Enlaces de licencia y atribución del contenido. */
 .copyright {
     border-top: 1px solid rgba(104, 112, 52, 0.2);
     padding-top: 20px;
@@ -714,7 +724,7 @@ main {
     text-decoration: underline;
 }
 
-/* Para que los iconos de CC se alineen bien con el texto */
+/* Alineación de los iconos de Creative Commons con el texto. */
 .icono-cc {
     max-width: 1.2em;
     max-height: 1.2em;
@@ -726,14 +736,15 @@ main {
    6. RESPONSIVE (Tablet y Móvil)
    ========================================= */
 @media (min-width: 992px) {
+    /* Distribución de tres columnas en pantallas grandes. */
     .contenedor-fondo-lila .info-seccion {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-
-    /* HEADER */
+    /* Ajustes de cabecera en tablet. */
+    /* El objetivo aquí es reducir densidad sin perder navegación. */
     .cabecera-principal {
         padding: 8px 10px;
     }
@@ -764,12 +775,13 @@ main {
         font-size: 13px;
     }
 
+    /* Ajuste del bloque lila para que no quede demasiado compacto. */
     .contenedor-fondo-lila .info-seccion {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    /* PÁGINAS */
+    /* Ajustes del contenido principal en tablet. */
     .hero h1 {
         font-size: 3em;
     }
@@ -787,7 +799,7 @@ main {
         padding: 30px 20px;
     }
 
-    /* FOOTER */
+    /* Ajustes del pie de página en tablet. */
     .footer-principal {
         padding: 20px 25px;
     }
@@ -796,7 +808,8 @@ main {
 
 @media (max-width: 767px) {
 
-    /* HEADER - MENÚ HAMBURGUESA */
+    /* Cabecera y menú hamburguesa. */
+    /* En móvil la navegación pasa a un panel desplegable. */
     .cabecera-principal {
         padding: 10px 15px;
     }
@@ -847,18 +860,50 @@ main {
         display: flex;
     }
 
+    /* Menú principal apilado para interacción táctil. */
+    .menu-navegacion {
+        width: 100%;
+    }
+
     .menu-navegacion ul {
         flex-direction: column;
         align-items: center;
         width: 100%;
         gap: 15px;
+        padding: 20px 0;
+    }
+
+    .menu-navegacion li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .menu-navegacion a {
         display: block;
-        padding: 10px;
-        width: 100%;
+        width: 85%;
+        padding: 15px;
+        background-color: #ffffff;
+        color: #EB9263;
         text-align: center;
+        font-weight: bold;
+        border-radius: 15px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.1s ease, background-color 0.1s ease;
+    }
+
+    /* Efecto de pulsación inmediata en el estado activo. */
+    .menu-navegacion a:active {
+        background-color: #EB9263;
+        color: #ffffff !important;
+        transform: scale(0.95);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Se elimina el subrayado decorativo de escritorio. */
+    .menu-navegacion a::after {
+        display: none;
     }
 
     .zona-derecha {
@@ -883,7 +928,7 @@ main {
         margin-top: 10px;
     }
 
-    /* PÁGINAS */
+    /* Ajustes del contenido principal en móvil. */
 
     .hero h1 {
         font-size: 2.2em;
@@ -899,9 +944,10 @@ main {
         width: 100%;
     }
 
+    /* Las tarjetas pasan a una sola columna para facilitar el scroll. */
     .info-seccion {
         grid-template-columns: 1fr;
-        /* Una sola columna que ocupa todo el ancho */
+        /* Una sola columna que ocupa todo el ancho. */
         gap: 20px;
         margin: 40px auto;
         padding: 0 10px;
@@ -913,13 +959,13 @@ main {
         border-radius: 15px;
     }
 
-    /* Flexbox en columna para apilar las opiniones */
-    /* --- RESPONSIVE ENCABEZADOS Y GRID --- */
+    /* Encabezados y rejilla adaptados a móvil. */
+    /* Se reescala la jerarquía tipográfica para pantallas pequeñas. */
     .encabezado-seccion {
         margin-bottom: 25px;
     }
 
-    /* H2 en móvil (el H1 es 2.2em) */
+    /* H2 en móvil con menor jerarquía que el H1. */
     .encabezado-seccion h2 {
         font-size: 1.7em;
     }
@@ -930,7 +976,7 @@ main {
 
     .info-seccion {
         grid-template-columns: 1fr;
-        /* Una sola columna en iPhone */
+        /* Una sola columna en pantallas pequeñas. */
         padding: 0 15px;
     }
 
@@ -938,29 +984,25 @@ main {
         font-size: 35px;
     }
 
-    .cta-final-limpio {
-        margin: 30px 15px 60px 15px;
-    }
-
     .opinion {
         width: 100%;
         max-width: 100%;
     }
 
+    /* Encabezados de mayor peso visual en formularios y portadas. */
     .page-header h1,
     .form-card h1,
     .hero h1 {
         font-size: 2.1em;
-        /* H1 en móvil */
+        /* H1 en móvil. */
     }
 
     .encabezado-seccion h2 {
         font-size: 1.7em;
-        /* H2 en móvil siempre menor al H1 */
+        /* H2 en móvil siempre por debajo del H1. */
     }
 
-
-    /* FORMULARIOS */
+    /* Ajustes de los formularios en móvil. */
     .form-card {
         padding: 30px 20px;
         border-radius: 12px;
@@ -968,6 +1010,7 @@ main {
         border: 1px solid #e0e0e0;
     }
 
+    /* Ajustes específicos para el bloque de introducción de cada página. */
     .page-header {
         padding: 20px 15px;
         margin-bottom: 25px;
@@ -987,7 +1030,8 @@ main {
         gap: 15px;
     }
 
-    /* VIDEO */
+    /* Ajustes del bloque de vídeo en móvil. */
+    /* El contenedor se reduce para no ocupar demasiado alto de pantalla. */
     .contenedor-tutorial {
         padding: 20px 15px;
     }
@@ -996,14 +1040,9 @@ main {
         padding: 20px 15px;
     }
 
-    /* Aseguramos que los iconos no sean gigantes en pantallas pequeñas */
+    /* Los iconos mantienen una escala equilibrada en pantallas pequeñas. */
     .icono-paso {
         font-size: 35px;
-    }
-
-    /* Ajuste de márgenes del botón final en móvil */
-    .cta-final-limpio {
-        margin: 30px 15px 60px 15px;
     }
 
     .cta-final-limpio {
@@ -1011,7 +1050,7 @@ main {
         margin: 40px 0 80px 0;
     }
 
-    /* Ajuste de la caja lila en móvil */
+    /* Ajuste del bloque destacado en móvil. */
     .caja-destacada {
         padding: 30px 15px;
         margin: 50px 15px 30px 15px;
@@ -1019,12 +1058,13 @@ main {
     }
 
 
-    /* FOOTER */
+    /* Ajustes del pie de página en móvil. */
+    /* El footer se apila para mejorar la lectura y el acceso táctil. */
     .footer-principal {
         padding: 20px 15px;
     }
 
-    /* En móvil pasamos de dos columnas a una*/
+    /* En móvil se pasa de dos columnas a una sola. */
     .footer-contenido {
         flex-direction: column;
         align-items: center;

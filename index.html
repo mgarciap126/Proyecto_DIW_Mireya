@@ -8,145 +8,260 @@
     <meta name="description" content="WoofMeet - Red social para perros y dueños">
     <title>WoofMeet - Inicio</title>
 
-    <!-- Enlace a CSS externo -->
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Favicon del sitio -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
-    <!-- Fuentes de Google -->
+    <!-- Tipografías externas de la identidad visual -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos de Bootstrap para componentes base -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Hoja de estilos principal del proyecto -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Se carga al final para respetar la prioridad de los estilos -->
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
+    <!-- Cabecera principal -->
     <header class="cabecera-principal">
-    <div class="contenedor-logo">
-        <a href="index.html" aria-label="Volver a la página de inicio de WoofMeet">
-            <img src="img/logo.png" alt="Logotipo de WoofMeet">
-        </a>
-    </div>
-
-    <input type="checkbox" id="menu-toggle" class="checkbox-oculto" aria-label="Abrir o cerrar menú de navegación móvil">
-    <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-
-    <div class="contenedor-menu-derecha">
-        <nav class="menu-navegacion" aria-label="Navegación principal">
-            <ul role="menubar">
-                <li role="none"><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
-                <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
-                <li role="none"><a href="seguridad.html" role="menuitem">Seguridad</a></li>
-            </ul>
-        </nav>
-
-        <div class="zona-derecha">
-            <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
-                <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
-                    <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
-                </a>
-                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
-                    <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
-                </a>
-                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
-                    <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
-                </a>
-                <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
-                    <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
-                </a>
-            </div>
-            <a href="login.html" class="btn-header-verde" aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
+        <div class="contenedor-logo">
+            <a href="index.html" aria-label="Volver a la página de inicio de WoofMeet">
+                <img src="img/logo.png" alt="Logotipo de WoofMeet">
+            </a>
         </div>
-    </div>
-</header>
 
-    <!-- CONTENIDO PRINCIPAL -->
+        <input type="checkbox" id="menu-toggle" class="checkbox-oculto"
+            aria-label="Abrir o cerrar menú de navegación móvil">
+        <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="contenedor-menu-derecha">
+            <nav class="menu-navegacion" aria-label="Navegación principal">
+                <ul role="menubar">
+                    <li role="none"><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
+                    <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="seguridad.html" role="menuitem">Seguridad</a></li>
+                </ul>
+            </nav>
+
+            <div class="zona-derecha">
+                <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
+                    <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
+                        <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
+                    </a>
+                    <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
+                        <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
+                    </a>
+                    <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
+                        <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
+                    </a>
+                    <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
+                        <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
+                    </a>
+                </div>
+                <a href="login.html" class="btn-header-verde"
+                    aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
     <main id="contenido-principal" aria-label="Contenido principal de WoofMeet">
 
-    <section class="hero" aria-label="Sección de bienvenida">
-        <h1>WoofMeet</h1>
-        <h2>Encuentra la manada perfecta para tu mejor amigo</h2>
+        <!-- Bloque de presentación: resume la propuesta de valor y dirige al registro -->
+        <section class="hero" aria-label="Sección de bienvenida">
+            <h1>WoofMeet</h1>
+            <h2>Encuentra la manada perfecta para tu mejor amigo</h2>
 
-        <div class="imagen-central">
-            <img src="img/imagen_portada.jpg" alt="Varios perros jugando felices en un parque soleado">
-        </div>
+            <div class="imagen-central">
+                <img src="img/imagen_portada.jpg" alt="Varios perros jugando felices en un parque soleado">
+            </div>
 
-        <a href="registro.html" class="btn-grande" aria-label="Ir al formulario de registro para crear una cuenta gratuita">¡Crear cuenta gratis!</a>
-    </section>
+            <a href="registro.html" class="btn-grande"
+                aria-label="Ir al formulario de registro para crear una cuenta gratuita">¡Crear cuenta gratis!</a>
+        </section>
 
-    <section class="info-seccion" aria-label="Características y servicios principales">
+        <!-- Tres columnas que explican, de forma rápida, las funciones más importantes -->
+        <section class="info-seccion" aria-label="Características y servicios principales">
 
-        <div class="columna">
-            <h3>🐶 Cómo funciona</h3>
-            <p>Es muy fácil: crea el perfil de tu peludo, activa la ubicación en tu móvil y descubre compañeros de juego compatibles en tu parque más cercano.</p>
-        </div>
+            <div class="columna">
+                <h3>🐶 Cómo funciona</h3>
+                <p>Es muy fácil: crea el perfil de tu peludo, activa la ubicación en tu móvil y descubre compañeros de
+                    juego compatibles en tu parque más cercano.</p>
+            </div>
 
-        <div class="columna">
-            <h3>🦴 Servicios</h3>
-            <p>¿Necesitas ayuda extra? Encuentra paseadores, cuidadores y adiestradores verificados por la comunidad. Gestiona reservas y pagos sin salir de la web.</p>
-        </div>
+            <div class="columna">
+                <h3>🦴 Servicios</h3>
+                <p>¿Necesitas ayuda extra? Encuentra paseadores, cuidadores y adiestradores verificados por la
+                    comunidad. Gestiona reservas y pagos sin salir de la web.</p>
+            </div>
 
-        <div class="columna">
-            <h3>🔒 Seguridad</h3>
-            <p>Tu tranquilidad es lo primero. Todos los perfiles son revisados manualmente y contamos con soporte 24/7 para garantizar una experiencia segura.</p>
-        </div>
+            <div class="columna">
+                <h3>🔒 Seguridad</h3>
+                <p>Tu tranquilidad es lo primero. Todos los perfiles son revisados manualmente y contamos con soporte
+                    24/7 para garantizar una experiencia segura.</p>
+            </div>
 
-    </section>
+        </section>
 
-    <section class="opiniones" aria-labelledby="titulo-opiniones">
-        <h3 id="titulo-opiniones">Lo que dicen los dueños</h3>
-        <div class="contenedor-opiniones">
-            
-            <article class="opinion" aria-label="Opinión de cliente">
-                <p>"¡Genial para encontrar amigos en el parque! Toby ya tiene su pandilla."</p>
-                <span>- María y Toby</span>
-            </article>
+        <!-- Prueba social basada en opiniones de usuarios para reforzar la confianza -->
+        <section class="opiniones" aria-labelledby="titulo-opiniones">
+            <h3 id="titulo-opiniones" style="text-align: center;">Lo que dicen los dueños</h3>
 
-            <article class="opinion" aria-label="Opinión de cliente">
-                <p>"El servicio de cuidadores me salvó las vacaciones. Muy recomendable."</p>
-                <span>- Carlos y Luna</span>
-            </article>
+            <!-- Carrusel de Bootstrap con testimonios de clientes reales -->
+            <div id="carruselWoofMeet" class="carousel carousel-dark slide mt-4" data-bs-ride="carousel">
 
-        </div>
-    </section>
+                <div class="carousel-inner pb-5">
+                    <div class="carousel-item active">
+                        <article class="opinion mx-auto" aria-label="Opinión de cliente">
+                            <div class="cabecera-perfil">
+                                <img src="./img/perfiles/perfil_2.jpg" alt="Foto de perfil de María"
+                                    class="foto-perfil">
+                                <span class="nombre-opinion">María y Toby</span>
+                            </div>
+                            <p>"¡Genial para encontrar amigos en el parque! Toby ya tiene su pandilla y yo he conocido a
+                                gente estupenda del barrio."</p>
+                        </article>
+                    </div>
 
-</main>
+                    <div class="carousel-item">
+                        <article class="opinion mx-auto" aria-label="Opinión de cliente">
+                            <div class="cabecera-perfil">
+                                <img src="./img/perfiles/perfil_1.jpg" alt="Foto de perfil de Carlos"
+                                    class="foto-perfil">
+                                <span class="nombre-opinion">Carlos y Luna</span>
+                            </div>
+                            <p>"El servicio de cuidadores me salvó las vacaciones. Dejé a Luna con total tranquilidad
+                                gracias a los perfiles verificados."</p>
+                        </article>
+                    </div>
 
-    <!-- PIE DE PÁGINA -->
+                    <div class="carousel-item">
+                        <article class="opinion mx-auto" aria-label="Opinión de cliente">
+                            <div class="cabecera-perfil">
+                                <img src="./img/perfiles/perfil_4.jpg" alt="Foto de perfil de Laura"
+                                    class="foto-perfil">
+                                <span class="nombre-opinion">Laura y Max</span>
+                            </div>
+                            <p>"La aplicación es súper fácil de usar. Nos encanta la función del mapa para ver qué
+                                perritos hay cerca. ¡Un 10!"</p>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="opinion mx-auto" aria-label="Opinión de cliente">
+                            <div class="cabecera-perfil">
+                                <img src="./img/perfiles/perfil_7.jpg" alt="Foto de perfil de Javier"
+                                    class="foto-perfil">
+                                <span class="nombre-opinion">Javier y Thor</span>
+                            </div>
+                            <p>"Con mi nuevo horario no podía darle a Thor los paseos largos que necesita. Encontré a un
+                                vecino paseador genial en mi misma calle. ¡Nos ha salvado!"</p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-item">
+                        <article class="opinion mx-auto" aria-label="Opinión de cliente">
+                            <div class="cabecera-perfil">
+                                <img src="./img/perfiles/perfil_6.jpg" alt="Foto de perfil de Elena"
+                                    class="foto-perfil">
+                                <span class="nombre-opinion">Elena y Kira</span>
+                            </div>
+                            <p>"Kira era muy miedosa con perros grandes. Al poder filtrar por tamaño en la app, hemos
+                                encontrado compañeros perfectos para ella. Ha ganado muchísima confianza."</p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-item">
+                        <article class="opinion mx-auto" aria-label="Opinión de cliente">
+                            <div class="cabecera-perfil">
+                                <img src="./img/perfiles/perfil_3.jpg" alt="Foto de perfil de Pablo"
+                                    class="foto-perfil">
+                                <span class="nombre-opinion">Pablo y Bruno</span>
+                            </div>
+                            <p>"Lo que más me gusta es la tranquilidad que da la plataforma. Saber que los cuidadores
+                                están verificados no tiene precio cuando se trata de tu mejor amigo."</p>
+                        </article>
+                    </div>
+
+                </div>
+
+                <!-- Controles de navegación para avanzar o retroceder entre opiniones -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselWoofMeet"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselWoofMeet"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+
+                <!-- Indicadores visuales que permiten saltar directamente a una opinión concreta -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselWoofMeet" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselWoofMeet" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselWoofMeet" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carruselWoofMeet" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carruselWoofMeet" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carruselWoofMeet" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página con ayuda, enlaces legales y acceso a redes sociales -->
     <footer class="footer-principal" aria-label="Pie de página">
-    <div class="footer-contenido">
-        <div class="footer-left">
-            <h4>¿Necesitas ayuda?</h4>
-            <a href="contacto.html" class="enlace-contacto" aria-label="Contactar con el equipo de soporte">Contactar con Soporte</a>
-            <p class="legales">
-                <a href="privacidad.html" aria-label="Leer Política de Privacidad">Política de Privacidad</a> | 
-                <a href="cookies.html" aria-label="Leer Política de Cookies">Cookies</a>
-            </p>
-        </div>
+        <div class="footer-contenido">
+            <div class="footer-left">
+                <h4>¿Necesitas ayuda?</h4>
+                <a href="contacto.html" class="enlace-contacto"
+                    aria-label="Contactar con el equipo de soporte">Contactar con Soporte</a>
+                <p class="legales">
+                    <a href="#" aria-label="Leer Política de Privacidad">Política de Privacidad</a> |
+                    <a href="#" aria-label="Leer Política de Cookies">Cookies</a>
+                </p>
+            </div>
 
-        <div class="footer-right">
-            <h4>Síguenos</h4>
-            <div class="social-icons" aria-label="Redes sociales de WoofMeet">
-                <a href="#" class="social-btn instagram" aria-label="Visitar nuestro perfil de Instagram">IG</a>
-                <a href="#" class="social-btn facebook" aria-label="Visitar nuestra página de Facebook">FB</a>
-                <a href="#" class="social-btn twitter" aria-label="Visitar nuestro perfil de Twitter">TW</a>
+            <div class="footer-right">
+                <h4>Síguenos</h4>
+                <div class="social-icons" aria-label="Redes sociales de WoofMeet">
+                    <a href="#" class="social-btn instagram" aria-label="Visitar nuestro perfil de Instagram">IG</a>
+                    <a href="#" class="social-btn facebook" aria-label="Visitar nuestra página de Facebook">FB</a>
+                    <a href="#" class="social-btn twitter" aria-label="Visitar nuestro perfil de Twitter">TW</a>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="copyright">
-        <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by Mireya García Piñas is licensed under
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons" class="icono-cc">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
-    </div>
-</footer>
 
+        <div class="copyright">
+            <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by
+            Mireya García Piñas is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC
+                BY-NC-ND 4.0</a>
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons"
+                class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
