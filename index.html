@@ -14,31 +14,38 @@
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- ENCABEZADO -->
     <header class="cabecera-principal">
-        <div class="contenedor-logo">
-            <a href="index.html" aria-label="Volver al inicio de WoofMeet">
-                <img src="img/logo.png" alt="Logotipo de WoofMeet: silueta de perro y texto">
-            </a>
-        </div>
+    <div class="contenedor-logo">
+        <a href="index.html" aria-label="Volver a la página de inicio de WoofMeet">
+            <img src="img/logo.png" alt="Logotipo de WoofMeet">
+        </a>
+    </div>
 
-        <nav class="menu-navegacion">
+    <input type="checkbox" id="menu-toggle" class="checkbox-oculto" aria-label="Abrir o cerrar menú de navegación móvil">
+    <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="contenedor-menu-derecha">
+        <nav class="menu-navegacion" aria-label="Navegación principal">
             <ul role="menubar">
-                <li><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
-                <li><a href="servicios.html" role="menuitem">Servicios</a></li>
-                <li><a href="seguridad.html" role="menuitem">Seguridad</a></li>
+                <li role="none"><a href="como-funciona.html" role="menuitem">Cómo funciona</a></li>
+                <li role="none"><a href="servicios.html" role="menuitem">Servicios</a></li>
+                <li role="none"><a href="seguridad.html" role="menuitem">Seguridad</a></li>
             </ul>
         </nav>
 
         <div class="zona-derecha">
-            <div class="contenedor-idiomas" role="group" aria-label="Seleccionar idioma">
-                <a href="#" class="enlace-idioma activo" aria-label="Cambiar idioma a Español" title="Español">
+            <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
+                <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
                     <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
                 </a>
                 <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
@@ -51,94 +58,94 @@
                     <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
                 </a>
             </div>
-            <a href="login.html" class="boton-acceso" aria-label="Acceder al área de usuario">Iniciar Sesión</a>
+            <a href="login.html" class="btn-header-verde" aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main>
+    <main id="contenido-principal" aria-label="Contenido principal de WoofMeet">
 
-        <!-- SECCIÓN HERO (Bienvenida) -->
-        <section class="hero">
-            <h1>WoofMeet</h1>
-            <h2>Encuentra la manada perfecta para tu mejor amigo</h2>
+    <section class="hero" aria-label="Sección de bienvenida">
+        <h1>WoofMeet</h1>
+        <h2>Encuentra la manada perfecta para tu mejor amigo</h2>
 
-            <!-- Imagen Central Grande y Rectangular -->
-            <div class="imagen-central">
-                <img src="img/imagen_portada.jpg" alt="Perros jugando felices en el parque">
-            </div>
+        <div class="imagen-central">
+            <img src="img/imagen_portada.jpg" alt="Varios perros jugando felices en un parque soleado">
+        </div>
 
-            <a href="registro.html" class="btn-grande">¡Crear cuenta gratis!</a>
-        </section>
+        <a href="registro.html" class="btn-grande" aria-label="Ir al formulario de registro para crear una cuenta gratuita">¡Crear cuenta gratis!</a>
+    </section>
 
-        <!-- SECCIÓN CARACTERÍSTICAS (3 Columnas que explican el menú) -->
-        <section class="info-seccion clearfix">
+    <section class="info-seccion" aria-label="Características y servicios principales">
 
-            <!-- Columna 1 -> Coincide con "Cómo funciona" -->
-            <div class="columna">
-                <h3>🐶 Cómo funciona</h3>
-                <p>Es muy fácil: crea el perfil de tu peludo, activa la ubicación en tu móvil y descubre compañeros de
-                    juego compatibles en tu parque más cercano.</p>
-            </div>
+        <div class="columna">
+            <h3>🐶 Cómo funciona</h3>
+            <p>Es muy fácil: crea el perfil de tu peludo, activa la ubicación en tu móvil y descubre compañeros de juego compatibles en tu parque más cercano.</p>
+        </div>
 
-            <!-- Columna 2 -> Coincide con "Servicios" -->
-            <div class="columna">
-                <h3>🦴 Servicios</h3>
-                <p>¿Necesitas ayuda extra? Encuentra paseadores, cuidadores y adiestradores verificados por la
-                    comunidad. Gestiona reservas y pagos sin salir de la web.</p>
-            </div>
+        <div class="columna">
+            <h3>🦴 Servicios</h3>
+            <p>¿Necesitas ayuda extra? Encuentra paseadores, cuidadores y adiestradores verificados por la comunidad. Gestiona reservas y pagos sin salir de la web.</p>
+        </div>
 
-            <!-- Columna 3 -> Coincide con "Seguridad" -->
-            <div class="columna">
-                <h3>🔒 Seguridad</h3>
-                <p>Tu tranquilidad es lo primero. Todos los perfiles son revisados manualmente y contamos con soporte
-                    24/7 para garantizar una experiencia segura.</p>
-            </div>
+        <div class="columna">
+            <h3>🔒 Seguridad</h3>
+            <p>Tu tranquilidad es lo primero. Todos los perfiles son revisados manualmente y contamos con soporte 24/7 para garantizar una experiencia segura.</p>
+        </div>
 
-        </section>
+    </section>
 
-        <!-- SECCIÓN OPINIONES -->
-        <section class="opiniones">
-            <h3>Lo que dicen los dueños</h3>
-            <div class="contenedor-opiniones">
-                <div class="opinion">
-                    <p>"¡Genial para encontrar amigos en el parque! Toby ya tiene su pandilla."</p>
-                    <span>- María y Toby</span>
-                </div>
-                <div class="opinion">
-                    <p>"El servicio de cuidadores me salvó las vacaciones. Muy recomendable."</p>
-                    <span>- Carlos y Luna</span>
-                </div>
-            </div>
-        </section>
+    <section class="opiniones" aria-labelledby="titulo-opiniones">
+        <h3 id="titulo-opiniones">Lo que dicen los dueños</h3>
+        <div class="contenedor-opiniones">
+            
+            <article class="opinion" aria-label="Opinión de cliente">
+                <p>"¡Genial para encontrar amigos en el parque! Toby ya tiene su pandilla."</p>
+                <span>- María y Toby</span>
+            </article>
 
-    </main>
+            <article class="opinion" aria-label="Opinión de cliente">
+                <p>"El servicio de cuidadores me salvó las vacaciones. Muy recomendable."</p>
+                <span>- Carlos y Luna</span>
+            </article>
+
+        </div>
+    </section>
+
+</main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="clearfix">
-
-        <!-- Izquierda: Contacto -->
+    <footer class="footer-principal" aria-label="Pie de página">
+    <div class="footer-contenido">
         <div class="footer-left">
             <h4>¿Necesitas ayuda?</h4>
-            <a href="contacto.html" class="enlace-contacto">Contactar con Soporte</a>
-            <p class="legales">Política de Privacidad | Cookies</p>
+            <a href="contacto.html" class="enlace-contacto" aria-label="Contactar con el equipo de soporte">Contactar con Soporte</a>
+            <p class="legales">
+                <a href="privacidad.html" aria-label="Leer Política de Privacidad">Política de Privacidad</a> | 
+                <a href="cookies.html" aria-label="Leer Política de Cookies">Cookies</a>
+            </p>
         </div>
 
-        <!-- Derecha: Redes Sociales -->
         <div class="footer-right">
             <h4>Síguenos</h4>
-            <div class="social-icons">
-                <button class="social-btn instagram">IG</button>
-                <button class="social-btn facebook">FB</button>
-                <button class="social-btn twitter">TW</button>
+            <div class="social-icons" aria-label="Redes sociales de WoofMeet">
+                <a href="#" class="social-btn instagram" aria-label="Visitar nuestro perfil de Instagram">IG</a>
+                <a href="#" class="social-btn facebook" aria-label="Visitar nuestra página de Facebook">FB</a>
+                <a href="#" class="social-btn twitter" aria-label="Visitar nuestro perfil de Twitter">TW</a>
             </div>
         </div>
-
-        <!-- Abajo: Copyright -->
-        <div class="copyright">
-            &copy; 2025 WoofMeet. Conectando colas felices.
-        </div>
-    </footer>
+    </div>
+    
+    <div class="copyright">
+        <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by Mireya García Piñas is licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons" class="icono-cc">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
+    </div>
+</footer>
 
 </body>
 
