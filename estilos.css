@@ -417,6 +417,22 @@ main {
     font-family: 'Fredoka One', cursive;
 }
 
+/* Valoración en estrellas dentro de las tarjetas de opinión */
+.valoracion {
+    display: block;
+    margin-top: 8px;
+    color: #f5c518; /* color dorado para las estrellas */
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.valoracion .estrella {
+    display: inline-block;
+    font-size: 1.05rem;
+    line-height: 1;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
 /* Texto final del testimonio en formato de cita visual. */
 .opinion p {
     margin: 0;
