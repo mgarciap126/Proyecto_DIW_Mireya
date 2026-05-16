@@ -155,6 +155,28 @@ h3 {
     border: 2px solid #687034;
 }
 
+/* Botón secundario de acceso situado en la cabecera. */
+.boton-acceso {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #C99DEB;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.boton-acceso:hover {
+    background-color: #EB9263;
+    border-color: #EB9263;
+    color: white;
+}
+
 /* =========================================
    3. ESTILOS DE BOTONES (UNIFICADOS)
    ========================================= */
@@ -166,7 +188,7 @@ h3 {
     font-weight: bold;
     text-decoration: none;
     border-radius: 50px;
-    /* Cursor personalizado con una huella del estilo de la web. */
+    /* Cursor personalizado con la huella de la marca. */
     cursor: url('img/huella.png'), pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
@@ -215,6 +237,22 @@ h3 {
 .btn-grande:hover {
     background-color: #C99DEB;
     transform: scale(1.05);
+}
+
+.login-form button {
+    background-color: #eb9263;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #687034;
 }
 
 /* =========================================
@@ -286,6 +324,7 @@ main {
     padding: 30px 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Tarjeta con formato visual de bloque informativo. */
     border: 1px solid #f0f0f0;
     text-align: center;
 }
@@ -310,6 +349,18 @@ main {
     color: #EB9263;
     margin-bottom: 5px;
     line-height: 1;
+}
+
+.destacado-final {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Botón final cuando se coloca dentro del bloque de cierre. */
+.destacado-final .btn-grande {
+    display: inline-block;
+    margin-top: 25px;
 }
 
 /* Carrusel de opiniones. */
@@ -548,6 +599,7 @@ main {
 }
 
 /* Tarjeta principal del formulario de acceso. */
+/* Tarjeta principal del formulario de acceso. */
 .form-card {
     background: #fff;
     padding: 40px;
@@ -558,6 +610,7 @@ main {
     border: 1px solid #eee;
 }
 
+/* Estructura flexible común para los formularios de la web. */
 /* Estructura flexible común para los formularios de la web. */
 .formulario-contacto {
     max-width: 600px;
@@ -704,6 +757,7 @@ main {
 }
 
 /* Enlaces de licencia y atribución del contenido. */
+/* Enlaces de licencia y atribución del contenido. */
 .copyright {
     border-top: 1px solid rgba(104, 112, 52, 0.2);
     padding-top: 20px;
@@ -725,6 +779,7 @@ main {
 }
 
 /* Alineación de los iconos de Creative Commons con el texto. */
+/* Alineación de los iconos de Creative Commons con el texto. */
 .icono-cc {
     max-width: 1.2em;
     max-height: 1.2em;
@@ -743,6 +798,7 @@ main {
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
+
     /* Ajustes de cabecera en tablet. */
     /* El objetivo aquí es reducir densidad sin perder navegación. */
     .cabecera-principal {
