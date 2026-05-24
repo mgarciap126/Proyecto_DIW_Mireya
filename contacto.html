@@ -23,10 +23,11 @@
 
         <input type="checkbox" id="menu-toggle" class="checkbox-oculto"
             aria-label="Abrir o cerrar menú de navegación móvil">
-        <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+        <label for="menu-toggle" class="icono-hamburguesa">
+            <span class="texto-oculto">Abrir menú</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </label>
 
         <div class="contenedor-menu-derecha">
@@ -41,19 +42,23 @@
             <div class="zona-derecha">
                 <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
                     <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
-                        <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
+                        <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                     <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
-                        <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
+                        <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                     <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
-                        <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
+                        <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                     <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
-                        <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
+                        <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                 </div>
-                <a href="login.html" class="btn-header-verde"
+                <a href="login.html" class="btn-login-header"
                     aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
             </div>
         </div>
@@ -67,40 +72,48 @@
         </section>
 
         <!-- Campo de entrada para que el usuario pueda enviar su consulta -->
-        <section class="contenido-texto" aria-label="Formulario de contacto">
+        <section class="form-card" aria-label="Tarjeta de formulario de contacto">
             <form class="formulario-contacto" action="index.html" method="GET">
 
                 <!-- Campo de texto para identificar a la persona que escribe -->
                 <div class="campo-form">
                     <label for="nombre">Tu Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ej: Laura García" autocomplete="name"
-                        required aria-required="true">
+                        required aria-required="true" tabindex="1">
                 </div>
 
                 <!-- Campo de correo para responder al mensaje de soporte -->
                 <div class="campo-form">
                     <label for="email">Tu Correo Electrónico:</label>
                     <input type="email" id="email" name="email" placeholder="nombre@correo.com" autocomplete="email"
-                        required aria-required="true">
+                        required aria-required="true" tabindex="2">
                 </div>
 
                 <!-- Campo temático para clasificar la consulta antes de enviarla -->
                 <div class="campo-form">
                     <label for="asunto">Asunto:</label>
                     <input type="text" id="asunto" name="asunto" placeholder="Duda sobre servicios..." required
-                        aria-required="true">
+                        aria-required="true" tabindex="3">
                 </div>
 
                 <!-- Área de texto amplia para redactar la consulta con más detalle -->
                 <div class="campo-form">
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta..." required
-                        aria-required="true"></textarea>
+                        aria-required="true" tabindex="4"></textarea>
                 </div>
 
                 <!-- Botón de envío del formulario de soporte -->
-                <button type="submit" class="btn-grande btn-formulario">Enviar Mensaje</button>
+                <button type="submit" class="btn-grande btn-formulario" tabindex="5">Enviar Mensaje</button>
             </form>
+
+            <div class="acciones-finales">
+                <nav aria-label="Navegación de retorno">
+                    <a href="index.html" class="btn-volver-verde"
+                        aria-label="Volver a la página de inicio de WoofMeet">←
+                        Volver a inicio</a>
+                </nav>
+            </div>
         </section>
     </main>
 
@@ -128,15 +141,18 @@
         </div>
 
         <div class="copyright">
-            <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by
+            <a href="index.html">WoofMeet</a> © 2026 by
             Mireya García Piñas is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC
                 BY-NC-ND 4.0</a>
-            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons"
-                class="icono-cc">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons" class="icono-cc"
+                width="20" height="20" loading="lazy">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc"
+                width="20" height="20" loading="lazy">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc"
+                width="20" height="20" loading="lazy">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc"
+                width="20" height="20" loading="lazy">
         </div>
     </footer>
 </body>

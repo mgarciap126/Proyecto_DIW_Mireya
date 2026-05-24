@@ -15,6 +15,10 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #fdfdfd;
     color: #333;
+    /* Configuración para el Sticky Footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Jerarquía tipográfica principal para titulares de contenido. */
@@ -42,6 +46,19 @@ h3 {
 .checkbox-oculto,
 .icono-hamburguesa {
     display: none;
+}
+
+/* Clase de utilidad para accesibilidad: oculta texto visualmente pero lo lee el lector de pantalla */
+.texto-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* Separación visual entre el logotipo y la navegación. */
@@ -155,33 +172,11 @@ h3 {
     border: 2px solid #687034;
 }
 
-/* Botón secundario de acceso situado en la cabecera. */
-.boton-acceso {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #C99DEB;
-    border: 2px solid #ffffff;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-}
-
-.boton-acceso:hover {
-    background-color: #EB9263;
-    border-color: #EB9263;
-    color: white;
-}
-
 /* =========================================
    3. ESTILOS DE BOTONES (UNIFICADOS)
    ========================================= */
 .btn-login-header,
-.btn-header-verde,
+.btn-volver-verde,
 .btn-grande {
     /* Base común de los botones principales del sitio. */
     display: inline-block;
@@ -211,7 +206,7 @@ h3 {
 }
 
 /* Botón de navegación con contraste verde sobre fondo claro. */
-.btn-header-verde {
+.btn-volver-verde {
     background-color: #ffffff;
     color: #687034;
     border: 2px solid #687034;
@@ -219,7 +214,7 @@ h3 {
     font-size: 14px;
 }
 
-.btn-header-verde:hover {
+.btn-volver-verde:hover {
     background-color: #687034;
     color: white;
 }
@@ -239,20 +234,13 @@ h3 {
     transform: scale(1.05);
 }
 
-.login-form button {
-    background-color: #eb9263;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 5px;
-    transition: background-color 0.3s;
-}
-
-.login-form button:hover {
-    background-color: #687034;
+/* Contenedor unificado para botones al final de la página */
+.acciones-finales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 0 60px 0;
 }
 
 /* =========================================
@@ -262,6 +250,7 @@ h3 {
 main {
     padding: 40px 20px;
     text-align: center;
+    flex: 1;
 }
 
 /* Titular principal del bloque hero de la portada. */
@@ -312,19 +301,12 @@ main {
     line-height: 1;
 }
 
-/* Llamada a la acción situada al final de varias páginas. */
-.cta-final-limpio {
-    text-align: center;
-    margin: 40px 0 80px 0;
-}
-
 /* Tarjeta base usada para resumir servicios, pasos o ventajas. */
 .columna {
     background-color: #fff;
     padding: 30px 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    /* Tarjeta con formato visual de bloque informativo. */
     border: 1px solid #f0f0f0;
     text-align: center;
 }
@@ -349,18 +331,6 @@ main {
     color: #EB9263;
     margin-bottom: 5px;
     line-height: 1;
-}
-
-.destacado-final {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-/* Botón final cuando se coloca dentro del bloque de cierre. */
-.destacado-final .btn-grande {
-    display: inline-block;
-    margin-top: 25px;
 }
 
 /* Carrusel de opiniones. */
@@ -421,7 +391,8 @@ main {
 .valoracion {
     display: block;
     margin-top: 8px;
-    color: #f5c518; /* color dorado para las estrellas */
+    color: #f5c518;
+    /* color dorado para las estrellas */
     font-size: 0.95rem;
     letter-spacing: 1px;
 }
@@ -583,6 +554,40 @@ main {
     color: #EB9263;
 }
 
+/* Estilos para la tabla de servicios */
+.tabla-accesible {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-accesible th,
+.tabla-accesible td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabla-accesible th {
+    background-color: #687034;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    font-weight: normal;
+}
+
+.tabla-accesible tr:hover {
+    background-color: #f6f5ff;
+}
+
+/* Elimina el subrayado punteado por defecto de las abreviaturas en la tabla */
+.tabla-accesible abbr {
+    text-decoration: none;
+}
+
 /* =========================================
    5. FOOTER (FLEXBOX)
    ========================================= */
@@ -615,7 +620,6 @@ main {
 }
 
 /* Tarjeta principal del formulario de acceso. */
-/* Tarjeta principal del formulario de acceso. */
 .form-card {
     background: #fff;
     padding: 40px;
@@ -626,7 +630,11 @@ main {
     border: 1px solid #eee;
 }
 
-/* Estructura flexible común para los formularios de la web. */
+/* Corrección para cuando los botones finales están dentro de la tarjeta de formulario */
+.form-card .acciones-finales {
+    margin: 20px 0 0 0;
+}
+
 /* Estructura flexible común para los formularios de la web. */
 .formulario-contacto {
     max-width: 600px;
@@ -807,6 +815,7 @@ main {
    6. RESPONSIVE (Tablet y Móvil)
    ========================================= */
 @media (min-width: 992px) {
+
     /* Distribución de tres columnas en pantallas grandes. */
     .contenedor-fondo-lila .info-seccion {
         grid-template-columns: repeat(3, 1fr);
@@ -842,9 +851,15 @@ main {
         gap: 10px;
     }
 
-    .btn-header-verde {
+    .btn-volver-verde {
         padding: 8px 15px;
         font-size: 13px;
+    }
+
+    /* Ajustes del contenedor de botones finales en tablet */
+    .acciones-finales {
+        gap: 20px;
+        margin: 30px 0 40px 0;
     }
 
     /* Ajuste del bloque lila para que no quede demasiado compacto. */
@@ -874,6 +889,14 @@ main {
     /* Ajustes del pie de página en tablet. */
     .footer-principal {
         padding: 20px 25px;
+    }
+
+    /* Ajustes de la tabla en Tablet */
+    .tabla-accesible th,
+    .tabla-accesible td {
+        padding: 12px 10px;
+        /* Reducimos el margen para que encaje mejor */
+        font-size: 0.95rem;
     }
 }
 
@@ -993,15 +1016,20 @@ main {
         width: 100%;
     }
 
-    .btn-header-verde {
+    .btn-volver-verde {
         width: 80%;
         max-width: 250px;
         text-align: center;
         margin-top: 10px;
     }
 
-    /* Ajustes del contenido principal en móvil. */
+    /* Ajustes del contenedor de botones finales en móvil */
+    .acciones-finales {
+        gap: 15px;
+        margin: 25px 0 35px 0;
+    }
 
+    /* Ajustes del contenido principal en móvil. */
     .hero h1 {
         font-size: 2.2em;
     }
@@ -1052,6 +1080,7 @@ main {
         padding: 0 15px;
     }
 
+    /* Los iconos mantienen una escala equilibrada en pantallas pequeñas. */
     .icono-paso {
         font-size: 35px;
     }
@@ -1082,20 +1111,58 @@ main {
         border: 1px solid #e0e0e0;
     }
 
+    /* --- Ajustes de la tabla en Móvil (Estilo Tarjetas) --- */
+    .tabla-accesible {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .tabla-accesible th {
+        display: none;
+    }
+
+    .tabla-accesible tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #C99DEB;
+        border-radius: 12px;
+        background-color: #fff;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .tabla-accesible tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .tabla-accesible td {
+        display: block;
+        text-align: right;
+        padding: 15px;
+        padding-left: 50%;
+        position: relative;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .tabla-accesible td:last-child {
+        border-bottom: none;
+    }
+
+    .tabla-accesible td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: #687034;
+    }
+
     /* Ajustes específicos para el bloque de introducción de cada página. */
     .page-header {
         padding: 20px 15px;
         margin-bottom: 25px;
-    }
-
-    .page-header h1 {
-        font-size: 2em;
-    }
-
-    .contenido-texto {
-        width: 100%;
-        padding: 25px 15px;
-        border-radius: 12px;
     }
 
     .formulario-contacto {
@@ -1112,23 +1179,12 @@ main {
         padding: 20px 15px;
     }
 
-    /* Los iconos mantienen una escala equilibrada en pantallas pequeñas. */
-    .icono-paso {
-        font-size: 35px;
-    }
-
-    .cta-final-limpio {
-        text-align: center;
-        margin: 40px 0 80px 0;
-    }
-
     /* Ajuste del bloque destacado en móvil. */
     .caja-destacada {
         padding: 30px 15px;
         margin: 50px 15px 30px 15px;
         border-radius: 15px;
     }
-
 
     /* Ajustes del pie de página en móvil. */
     /* El footer se apila para mejorar la lectura y el acceso táctil. */

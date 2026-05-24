@@ -23,10 +23,11 @@
 
         <input type="checkbox" id="menu-toggle" class="checkbox-oculto"
             aria-label="Abrir o cerrar menú de navegación móvil">
-        <label for="menu-toggle" class="icono-hamburguesa" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+        <label for="menu-toggle" class="icono-hamburguesa">
+            <span class="texto-oculto">Abrir menú</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </label>
 
         <div class="contenedor-menu-derecha">
@@ -41,19 +42,23 @@
             <div class="zona-derecha">
                 <div class="contenedor-idiomas" role="group" aria-label="Selector de idiomas">
                     <a href="#" class="enlace-idioma activo" aria-label="Idioma actual: Español" title="Español">
-                        <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera">
+                        <img src="./img/banderas/es.svg" alt="Bandera de España" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                     <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Inglés" title="Inglés">
-                        <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera">
+                        <img src="./img/banderas/en.svg" alt="Bandera de Reino Unido" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                     <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Francés" title="Francés">
-                        <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera">
+                        <img src="./img/banderas/fr.svg" alt="Bandera de Francia" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                     <a href="#" class="enlace-idioma" aria-label="Cambiar idioma a Portugués" title="Portugués">
-                        <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera">
+                        <img src="./img/banderas/pt.svg" alt="Bandera de Portugal" class="icono-bandera" width="28"
+                            height="20" loading="lazy">
                     </a>
                 </div>
-                <a href="login.html" class="btn-header-verde"
+                <a href="login.html" class="btn-login-header"
                     aria-label="Acceder al formulario de inicio de sesión">Iniciar Sesión</a>
             </div>
         </div>
@@ -70,7 +75,7 @@
         <div class="contenedor-fondo-lila">
 
             <!-- Rejilla con los controles y garantías que ofrece el servicio -->
-            <section class="info-seccion grid-3-columnas" aria-label="Nuestros 6 pilares de seguridad">
+            <section class="info-seccion" aria-label="Nuestros 6 pilares de seguridad">
 
                 <!-- Verificación manual de perfiles para reducir cuentas falsas -->
                 <article class="columna" aria-labelledby="seg-verificacion">
@@ -122,10 +127,14 @@
 
             </section>
         </div>
-        <div class="cta-final-limpio">
-            <!-- Llamada a la acción final para invitar al registro con un mensaje de confianza -->
+        <div class="acciones-finales">
             <a href="registro.html" class="btn-grande" aria-label="Crear una cuenta segura en WoofMeet">Únete con total
                 tranquilidad</a>
+
+            <nav aria-label="Navegación de retorno">
+                <a href="index.html" class="btn-volver-verde" aria-label="Volver a la página de inicio de WoofMeet">←
+                    Volver a inicio</a>
+            </nav>
         </div>
 
     </main>
@@ -153,15 +162,18 @@
         </div>
 
         <div class="copyright">
-            <a href="https://woofmeet.wuaze.com/" target="_blank" rel="noopener noreferrer">WoofMeet</a> © 2026 by
+            <a href="index.html">WoofMeet</a> © 2026 by
             Mireya García Piñas is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC
                 BY-NC-ND 4.0</a>
-            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons"
-                class="icono-cc">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons" class="icono-cc"
+                width="20" height="20" loading="lazy">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Atribución" class="icono-cc"
+                width="20" height="20" loading="lazy">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="No Comercial" class="icono-cc"
+                width="20" height="20" loading="lazy">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="Sin Derivadas" class="icono-cc"
+                width="20" height="20" loading="lazy">
         </div>
     </footer>
 </body>
