@@ -123,44 +123,39 @@
                 <p>Precios medios sugeridos por la comunidad según el servicio.</p>
             </div>
 
-            <!-- Contenedor con scroll horizontal para tablas en pantallas pequeñas -->
-            <div style="overflow-x:auto;">
-                <!-- Tabla accesible: uso de <abbr> en encabezados y atributos
-                     `headers` / `data-label` en celdas para mejorar la experiencia
-                     en lectores de pantalla y en diseños responsivos. -->
-                <table class="tabla-accesible" aria-describedby="titulo-tabla">
-                    <thead>
-                        <tr>
-                            <th id="cab-servicio">
-                                <abbr title="Tipo de Servicio">Servicio</abbr>
-                            </th>
-                            <th id="cab-duracion">
-                                <abbr title="Duración o Frecuencia">Duración/Frec.</abbr>
-                            </th>
-                            <th id="cab-precio">
-                                <abbr title="Precio Medio Sugerido">Precio Medio</abbr>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td headers="cab-servicio" data-label="Servicio">Paseo Básico</td>
-                            <td headers="cab-duracion" data-label="Duración/Frec.">30 - 45 Minutos</td>
-                            <td headers="cab-precio" data-label="Precio Medio">6€ - 8€</td>
-                        </tr>
-                        <tr>
-                            <td headers="cab-servicio" data-label="Servicio">Cuidado a domicilio</td>
-                            <td headers="cab-duracion" data-label="Duración/Frec.">Media jornada (4h)</td>
-                            <td headers="cab-precio" data-label="Precio Medio">15€ - 20€</td>
-                        </tr>
-                        <tr>
-                            <td headers="cab-servicio" data-label="Servicio">Alojamiento Completo</td>
-                            <td headers="cab-duracion" data-label="Duración/Frec.">Por noche (24h)</td>
-                            <td headers="cab-precio" data-label="Precio Medio">20€ - 25€</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <!-- Tabla accesible -->
+            <table class="tabla-accesible" aria-describedby="titulo-tabla">
+                <thead>
+                    <tr>
+                        <th id="cab-servicio">
+                            <abbr title="Tipo de Servicio">Servicio</abbr>
+                        </th>
+                        <th id="cab-duracion">
+                            <abbr title="Duración o Frecuencia">Duración/Frec.</abbr>
+                        </th>
+                        <th id="cab-precio">
+                            <abbr title="Precio Medio Sugerido">Precio Medio</abbr>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="cab-servicio" data-label="Servicio">Paseo Básico</td>
+                        <td headers="cab-duracion" data-label="Duración/Frec.">30 - 45 Minutos</td>
+                        <td headers="cab-precio" data-label="Precio Medio">6€ - 8€</td>
+                    </tr>
+                    <tr>
+                        <td headers="cab-servicio" data-label="Servicio">Cuidado a domicilio</td>
+                        <td headers="cab-duracion" data-label="Duración/Frec.">Media jornada (4h)</td>
+                        <td headers="cab-precio" data-label="Precio Medio">15€ - 20€</td>
+                    </tr>
+                    <tr>
+                        <td headers="cab-servicio" data-label="Servicio">Alojamiento Completo</td>
+                        <td headers="cab-duracion" data-label="Duración/Frec.">Por noche (24h)</td>
+                        <td headers="cab-precio" data-label="Precio Medio">20€ - 25€</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <div class="acciones-finales">
